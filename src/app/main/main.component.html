@@ -1,0 +1,17 @@
+
+<h6>Main html connected successfully</h6>
+
+<!-- LOOP through details received from MAIN.COMPONENT.TS -->
+<div *ngFor="let weather of weatherdetails.list">
+    <div class="card" style="width: 18rem;">
+      <!-- the img tag requires conditioning to assign proper images -->
+        <img class="card-img-top" src="images/cloudy.jpg" alt="Cloud image">
+        <div class="card-body">
+          <h5 class="card-title"><span>Weather: </span>{{weather.weather[0].main}}</h5>
+          <p class="card-text"><span>Temp: </span>{{weather.main.temp}}</p>
+          <p class="card-text"><span>Pressure: </span>{{weather.main.pressure}}</p>
+          <p class="card-text"><span>Humidity: </span>{{weather.main.humidity}}</p>
+          <p class="card-text"><span>Description: </span>{{weather.weather[0].description}}</p>
+        </div>
+      </div>
+</div>
